@@ -1,0 +1,65 @@
+<div class="mt20">
+  <% if resource.errors.any? %>
+    <div class="alert alert-danger">
+      <ul>
+        <% resource.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="col-sm-12">
+    <div class="row">
+      <div class="col-sm-3"></div>
+      <div class="col-sm-6">
+        <div class="signin-wrapper sign-in-wrap row">
+          <%= form_with(model: resource,
+                        as: resource_name,
+                        url: session_path(resource_name),
+                        class: 'login-form',
+                        data: { turbo: true, controller: 'login' }) do |f| %>
+
+            <p class="lead">Hello, Welcome Back!</p>
+
+            <div class="form-group">
+              <%= f.email_field :email,
+                                autofocus: true,
+                                class: 'required custom-form-control form-control reset-border-radius',
+                                placeholder: 'Username' %>
+            </div>
+
+            <div class="form-group">
+              <%= f.password_field :password,
+                                   autocomplete: "off",
+                                   class: 'password required custom-form-control form-control reset-border-radius',
+                                   placeholder: 'Password' %>
+            </div>
+
+            <div class="form-group">
+              <label for="remember_me">
+                <%= f.check_box :remember_me, id: 'remember_me' %>
+                Remember Me
+              </label>
+
+              <div class="form-group others-link">
+                <a href="#forgot-password-form"
+                   data-action="click->login#showForgotPassword"
+                   title="Forgot Password">
+                  Lost Your Password?
+                </a>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <%= f.submit 'Log In', class: 'btn-primo-thin' %>
+            </div>
+          <% end %>
+        </div>
+      </div>
+      <div class="col-sm-3"></div>
+    </div>
+  </div>
+</div>
+
+<%#= render "users/shared/links" %>

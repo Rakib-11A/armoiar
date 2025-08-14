@@ -1,0 +1,44 @@
+<div class="sign-in-wrap">
+  <div class="sign-in-container mb20">
+    <h3>Update My Account</h3>
+
+    <%= form_with(model: resource, scope: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+      <%= render "devise/shared/error_messages", resource: resource %>
+
+      <div class="form-group">
+        <%= f.label :email %>
+        <%= f.email_field :email, autofocus: true, class: 'required custom-form-control form-control reset-border-radius' %>
+      </div>
+
+      <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+        <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+      <% end %>
+
+      <div class="form-group">
+        <%= f.label :password, "New Password" %> <i>(leave blank if you don't want to change it)</i><br />
+        <%= f.password_field :password, autocomplete: "new-password", class: 'required custom-form-control form-control reset-border-radius' %>
+        <% if @minimum_password_length %>
+          <em><%= @minimum_password_length %> characters minimum</em>
+        <% end %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :password_confirmation, "Confirm New Password" %><br />
+        <%= f.password_field :password_confirmation, autocomplete: "new-password", class: 'required custom-form-control form-control reset-border-radius' %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
+        <%= f.password_field :current_password, autocomplete: "current-password", class: 'required custom-form-control form-control reset-border-radius' %>
+      </div>
+
+      <div class="actions text-right">
+        <%= link_to "Back", :back, class: 'btn-yellow' %> | <%= f.submit "Update Account", class: 'btn-yellow' %>
+      </div>
+    <% end %>
+
+  </div>
+</div>
+
+
+<%#= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %>

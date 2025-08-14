@@ -1,15 +1,39 @@
 Rails.application.routes.draw do
-  devise_for :users
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+  
+  devise_for :users, controllers: {
+    sessions: 'users/sessions',
+    registrations: 'users/registrations',
+    passwords: 'users/passwords'
+  }
 
-  # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
-  # Can be used by load balancers and uptime monitors to verify that the app is live.
+  devise_scope :users do
+    get 'login', to: 'users/sessions#new', as: :user_login
+    delete 'logout', to: 'users/session#delete', as: :user_logout
+    get 'registration', to: 'users/registrations#new', as: :account_registration
+  end
+
   get "up" => "rails/health#show", as: :rails_health_check
+  root "home#index"
 
-  # Render dynamic PWA files from app/views/pwa/* (remember to link manifest in application.html.erb)
-  # get "manifest" => "rails/pwa#manifest", as: :pwa_manifest
-  # get "service-worker" => "rails/pwa#service_worker", as: :pwa_service_worker
+  # Public Page Routes
+  resources :contacts, only: [:new, :create]
+  get '/frequently-asked-question', to: 'public#faq', as: :faq
+  get '/secure_shopping', to: 'public#secure_shopping', as: :secure_shopping
+  get '/coupon-code', to: 'public#coupon', as: :coupon
+  get '/return-policy', to: 'public#return_policy', as: :return_policy
+  get '/our-promise', to: 'public#promise', as: :our_promise
+  match '/dedicated-customer-support', to: 'public#contact_us', via: [:get, :post], as: :contact_us
+  get '/free-shipping-worldwide', to: 'public#international', as: :international
+  get '/safe_shopping_guarantee', to: 'public#safe_shopping_guarantee', as: :safe_shopping_guarantee
+  get '/about_us', to: 'public#about_us', as: :about_us
+  get '/privacy_policy', to: 'public#privacy_policy', as: :privacy_policy
+  get '/term_condition', to: 'public#term_condition', as: :term_condition
+  get '/my_account', to: 'users#my_account'
+  get '/cart', to: 'public#cart'
+  get '/p_checkout', to: 'public#checkout'
+  post '/email_subscription', to: 'public#subscribe'
+  post '/checkout', to: 'checkout#check_coupon_code'
 
-  # Defines the root path route ("/")
-  # root "posts#index"
+
+
 end
