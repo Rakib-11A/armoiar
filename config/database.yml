@@ -2,15 +2,17 @@ default: &default
   adapter: postgresql
   encoding: unicode
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-
+  username: rakib
+  password: rakibhasan
+  host: localhost
 
 development:
   <<: *default
-  database: armoiar_development
+  database: armoiar
 
 test:
   <<: *default
-  database: armoiar_test
+  database: armoiar
 
 production:
   primary: &primary_production

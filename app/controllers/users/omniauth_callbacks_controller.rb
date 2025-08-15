@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
   # You should configure your model like this:
   # devise :omniauthable, omniauth_providers: [:twitter]
@@ -9,7 +7,7 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
   # end
 
   # More info at:
-  # https://github.com/heartcombo/devise#omniauth
+  # https://github.com/plataformatec/devise#omniauth
 
   # GET|POST /resource/auth/twitter
   # def passthru

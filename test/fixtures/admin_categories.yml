@@ -1,3 +1,20 @@
+# == Schema Information
+#
+# Table name: admin_categories
+#
+#  id          :integer          not null, primary key
+#  name        :string
+#  slug        :string
+#  description :string
+#  permalink   :string
+#  meta_title  :string
+#  meta_desc   :string
+#  keywords    :string
+#  parent_id   :integer
+#  created_at  :datetime         not null
+#  updated_at  :datetime         not null
+#
+
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:

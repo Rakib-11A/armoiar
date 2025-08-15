@@ -4,7 +4,7 @@
 #
 #  id          :integer          not null, primary key
 #  product_id  :integer
-#  relative_id :integer
+#  relative_id :string
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
 #

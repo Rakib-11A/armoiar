@@ -3,16 +3,22 @@
 # Table name: feedbacks
 #
 #  id               :integer          not null, primary key
-#  name             :string(255)
-#  email            :string(255)
-#  feedback_type    :string(255)
-#  message          :text(65535)
-#  product_quality  :string(255)
-#  product_price    :string(255)
-#  customer_service :text(65535)
+#  name             :string
+#  email            :string
+#  feedback_type    :string
+#  message          :text
+#  product_quality  :string
+#  product_price    :string
+#  customer_service :text
 #  rate             :integer
 #  created_at       :datetime         not null
 #  updated_at       :datetime         not null
+#  is_checked       :boolean
+#  user_id          :integer
+#
+# Indexes
+#
+#  index_feedbacks_on_user_id  (user_id)
 #
 
 class Feedback < ApplicationRecord

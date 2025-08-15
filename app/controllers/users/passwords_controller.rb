@@ -1,6 +1,6 @@
-# frozen_string_literal: true
-
 class Users::PasswordsController < Devise::PasswordsController
+  # include Core::ControllerHelpers::StoreHelper
+  # include Core::ControllerHelpers::OrderHelper
   # GET /resource/password/new
   # def new
   #   super

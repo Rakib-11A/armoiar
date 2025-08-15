@@ -1,3 +1,10 @@
+GIT
+  remote: https://github.com/galetahub/ckeditor.git
+  revision: f6f8e2b2f61a8315ea0994db74d8e4a1ed6a2570
+  specs:
+    ckeditor (5.1.3)
+      orm_adapter (~> 0.5.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -74,7 +81,10 @@ GEM
       uri (>= 0.13.1)
     addressable (2.8.7)
       public_suffix (>= 2.0.2, < 7.0)
+    airbrussh (1.5.3)
+      sshkit (>= 1.6.1, != 1.7.0)
     ast (2.4.3)
+    barby (0.7.0)
     base64 (0.3.0)
     bcrypt (3.1.20)
     bcrypt_pbkdf (1.1.1)
@@ -85,9 +95,31 @@ GEM
     bindex (0.8.1)
     bootsnap (1.18.6)
       msgpack (~> 1.2)
+    bootstrap (5.3.5)
+      popper_js (>= 2.11.8, < 3)
+    bootstrap-datepicker-rails (1.10.0.1)
+      railties (>= 3.0)
+    bootstrap4-kaminari-views (1.0.1)
+      kaminari (>= 0.13)
+      rails (>= 3.1)
     brakeman (7.1.0)
       racc
     builder (3.3.0)
+    byebug (12.0.0)
+    cancancan (3.6.1)
+    capistrano (3.19.2)
+      airbrussh (>= 1.0.0)
+      i18n
+      rake (>= 10.0.0)
+      sshkit (>= 1.9.0)
+    capistrano-bundler (2.1.1)
+      capistrano (~> 3.1)
+    capistrano-rails (1.7.0)
+      capistrano (~> 3.1)
+      capistrano-bundler (>= 1.1, < 3)
+    capistrano-rvm (0.1.2)
+      capistrano (~> 3.0)
+      sshkit (~> 1.2)
     capybara (3.40.0)
       addressable
       matrix
@@ -97,6 +129,23 @@ GEM
       rack-test (>= 0.6.3)
       regexp_parser (>= 1.5, < 3.0)
       xpath (~> 3.2)
+    carrierwave (3.1.2)
+      activemodel (>= 6.0.0)
+      activesupport (>= 6.0.0)
+      addressable (~> 2.6)
+      image_processing (~> 1.1)
+      marcel (~> 1.0.0)
+      ssrf_filter (~> 1.0)
+    childprocess (5.1.0)
+      logger (~> 1.5)
+    chunky_png (1.4.0)
+    coffee-rails (5.0.0)
+      coffee-script (>= 2.2.0)
+      railties (>= 5.2.0)
+    coffee-script (2.4.1)
+      coffee-script-source
+      execjs
+    coffee-script-source (1.12.2)
     concurrent-ruby (1.3.5)
     connection_pool (2.5.3)
     crass (1.0.6)
@@ -112,6 +161,10 @@ GEM
       railties (>= 4.1.0)
       responders
       warden (~> 1.2.3)
+    devise_token_auth (1.2.5)
+      bcrypt (~> 3.0)
+      devise (> 3.5.2, < 5)
+      rails (>= 4.2.0, < 8.1)
     dotenv (3.1.8)
     drb (2.2.3)
     ed25519 (1.4.0)
@@ -119,6 +172,17 @@ GEM
     erubi (1.13.1)
     et-orbi (1.3.0)
       tzinfo
+    execjs (2.10.0)
+    faker (3.5.2)
+      i18n (>= 1.8.11, < 2)
+    ffi (1.17.2-aarch64-linux-gnu)
+    ffi (1.17.2-aarch64-linux-musl)
+    ffi (1.17.2-arm-linux-gnu)
+    ffi (1.17.2-arm-linux-musl)
+    ffi (1.17.2-arm64-darwin)
+    ffi (1.17.2-x86_64-darwin)
+    ffi (1.17.2-x86_64-linux-gnu)
+    ffi (1.17.2-x86_64-linux-musl)
     friendly_id (5.5.1)
       activerecord (>= 4.0.0)
     fugit (1.11.1)
@@ -128,6 +192,9 @@ GEM
       activesupport (>= 6.1)
     i18n (1.14.7)
       concurrent-ruby (~> 1.0)
+    image_processing (1.14.0)
+      mini_magick (>= 4.9.5, < 6)
+      ruby-vips (>= 2.0.17, < 3)
     io-console (0.8.1)
     irb (1.15.2)
       pp (>= 0.6.0)
@@ -136,6 +203,12 @@ GEM
     jbuilder (2.14.1)
       actionview (>= 7.0.0)
       activesupport (>= 7.0.0)
+    jquery-rails (4.6.0)
+      rails-dom-testing (>= 1, < 3)
+      railties (>= 4.2.0)
+      thor (>= 0.14, < 2.0)
+    jquery-ui-rails (8.0.0)
+      railties (>= 3.2.16)
     jsbundling-rails (1.3.1)
       railties (>= 6.0.0)
     json (2.13.2)
@@ -150,8 +223,31 @@ GEM
       sshkit (>= 1.23.0, < 2.0)
       thor (~> 1.3)
       zeitwerk (>= 2.6.18, < 3.0)
+    kaminari (1.2.2)
+      activesupport (>= 4.1.0)
+      kaminari-actionview (= 1.2.2)
+      kaminari-activerecord (= 1.2.2)
+      kaminari-core (= 1.2.2)
+    kaminari-actionview (1.2.2)
+      actionview
+      kaminari-core (= 1.2.2)
+    kaminari-activerecord (1.2.2)
+      activerecord
+      kaminari-core (= 1.2.2)
+    kaminari-core (1.2.2)
     language_server-protocol (3.17.0.5)
+    launchy (3.1.1)
+      addressable (~> 2.8)
+      childprocess (~> 5.0)
+      logger (~> 1.6)
+    lazyload-rails (0.5.0)
+      nokogiri (~> 1.5)
+    letter_opener (1.10.0)
+      launchy (>= 2.2, < 4)
     lint_roller (1.1.0)
+    listen (3.9.0)
+      rb-fsevent (~> 0.10, >= 0.10.3)
+      rb-inotify (~> 0.9, >= 0.9.10)
     logger (1.7.0)
     loofah (2.24.1)
       crass (~> 1.0.2)
@@ -163,9 +259,12 @@ GEM
       net-smtp
     marcel (1.0.4)
     matrix (0.4.3)
+    mini_magick (5.3.0)
+      logger
     mini_mime (1.1.5)
     minitest (5.25.5)
     msgpack (1.8.0)
+    multi_json (1.17.0)
     net-imap (0.5.9)
       date
       net-protocol
@@ -197,12 +296,18 @@ GEM
       racc (~> 1.4)
     nokogiri (1.18.9-x86_64-linux-musl)
       racc (~> 1.4)
+    observer (0.1.2)
     orm_adapter (0.5.0)
     ostruct (0.6.3)
     parallel (1.27.0)
     parser (3.3.9.0)
       ast (~> 2.4.1)
       racc
+    paypal-sdk-core (0.3.6)
+      multi_json (~> 1.0)
+      xml-simple
+    paypal-sdk-merchant (1.117.4)
+      paypal-sdk-core (~> 0.3.0)
     pg (1.6.1)
     pg (1.6.1-aarch64-linux)
     pg (1.6.1-aarch64-linux-musl)
@@ -210,6 +315,8 @@ GEM
     pg (1.6.1-x86_64-darwin)
     pg (1.6.1-x86_64-linux)
     pg (1.6.1-x86_64-linux-musl)
+    pkg-config (1.6.2)
+    popper_js (2.11.8)
     pp (0.6.2)
       prettyprint
     prettyprint (0.2.0)
@@ -227,6 +334,9 @@ GEM
     raabro (1.4.0)
     racc (1.8.1)
     rack (3.2.0)
+    rack-cors (3.0.0)
+      logger
+      rack (>= 3.0.14)
     rack-session (2.1.1)
       base64 (>= 0.1.0)
       rack (>= 3.0.0)
@@ -265,6 +375,9 @@ GEM
       zeitwerk (~> 2.6)
     rainbow (3.1.1)
     rake (13.3.0)
+    rb-fsevent (0.11.2)
+    rb-inotify (0.11.1)
+      ffi (~> 1.0)
     rdoc (6.14.2)
       erb
       psych (>= 4.0.0)
@@ -275,6 +388,9 @@ GEM
       actionpack (>= 5.2)
       railties (>= 5.2)
     rexml (3.4.1)
+    rmagick (6.1.2)
+      observer (~> 0.1)
+      pkg-config (~> 1.4)
     rubocop (1.79.2)
       json (~> 2.3)
       language_server-protocol (~> 3.17.0.2)
@@ -304,14 +420,20 @@ GEM
       rubocop-performance (>= 1.24)
       rubocop-rails (>= 2.30)
     ruby-progressbar (1.13.0)
+    ruby-vips (2.2.4)
+      ffi (~> 1.12)
+      logger
     rubyzip (3.0.1)
     securerandom (0.4.1)
+    select2-rails (4.0.13)
     selenium-webdriver (4.35.0)
       base64 (~> 0.2)
       logger (~> 1.4)
       rexml (~> 3.2, >= 3.2.5)
       rubyzip (>= 1.2.2, < 4.0)
       websocket (~> 1.0)
+    social-share-button (1.2.4)
+      coffee-rails
     solid_cable (3.0.11)
       actioncable (>= 7.2)
       activejob (>= 7.2)
@@ -328,6 +450,10 @@ GEM
       fugit (~> 1.11.0)
       railties (>= 7.1)
       thor (>= 1.3.1)
+    spring (4.4.0)
+    spring-watcher-listen (2.1.0)
+      listen (>= 2.7, < 4.0)
+      spring (>= 4)
     sshkit (1.24.0)
       base64
       logger
@@ -335,6 +461,7 @@ GEM
       net-sftp (>= 2.1.2)
       net-ssh (>= 2.8.0)
       ostruct
+    ssrf_filter (1.3.0)
     stimulus-rails (1.3.4)
       railties (>= 6.0.0)
     stringio (3.1.7)
@@ -367,6 +494,8 @@ GEM
       base64
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.5)
+    xml-simple (1.1.9)
+      rexml
     xpath (3.2.0)
       nokogiri (~> 1.8)
     zeitwerk (2.7.3)
@@ -384,30 +513,62 @@ PLATFORMS
   x86_64-linux-musl
 
 DEPENDENCIES
+  barby
   bootsnap
+  bootstrap (~> 5.3)
+  bootstrap-datepicker-rails
+  bootstrap4-kaminari-views
   brakeman
+  byebug
+  cancancan (~> 3.5)
+  capistrano
+  capistrano-bundler
+  capistrano-rails
+  capistrano-rvm
   capybara
+  carrierwave (~> 3.0)
+  chunky_png
+  ckeditor!
   cssbundling-rails
   debug
   devise (~> 4.9)
+  devise_token_auth
+  faker
   friendly_id (~> 5.5)
   jbuilder
+  jquery-rails
+  jquery-ui-rails
   jsbundling-rails
   kamal
-  pg (~> 1.1)
+  kaminari (~> 1.2)
+  lazyload-rails
+  letter_opener
+  listen (~> 3.8)
+  mini_magick
+  paypal-sdk-merchant
+  pg (~> 1.5)
   propshaft
   puma (>= 5.0)
+  rack-cors
   rails (~> 8.0.2)
+  rmagick
   rubocop-rails-omakase
+  select2-rails
   selenium-webdriver
+  social-share-button
   solid_cable
   solid_cache
   solid_queue
+  spring
+  spring-watcher-listen (~> 2.1)
   stimulus-rails
   thruster
   turbo-rails
   tzinfo-data
   web-console
+
+RUBY VERSION
+   ruby 3.3.5p100
 
 BUNDLED WITH
    2.6.8
