@@ -90,5 +90,7 @@
     </div>
   </div>
 </section>
-<%= render 'users/login_modal' %>
+<% if current_user.blank? && !(controller_path.start_with?('devise/')) %>
+  <%= render 'users/login_modal' %>
+<% end %>
 <%#= render 'products/shared/quickview_modal' %>

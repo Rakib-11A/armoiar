@@ -1,20 +1,22 @@
-//= require jquery
-//= require jquery_ujs
+
 //= require rails-ujs
 //= require momentjs
 //= require lightgallery.min
-//= require bootstrap-datepicker
-//= require bootstrap-datetimepicker
-//= require bootstrap-sprockets
 //= require turbolinks
+//= require rating
 //= require_tree .
-//= require action_cable
+
 
    
    
 $(function () {
     var quickview_modal = $('#quickview-modal');
-    $('.star-rating').rateit();
+    if ($.fn.rateit) { 
+        console.log("rateit found");
+        $('.star-rating').rateit(); 
+    }else{
+        console.log("rateit not found");
+    }
     $(document).on('click', '.quickview', function (e) {
         $.ajax({
             url: $(this).attr('data-action'),

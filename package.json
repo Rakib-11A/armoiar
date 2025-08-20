@@ -2,6 +2,7 @@
   "dependencies": {
     "bootstrap": "^5.3.7",
     "jquery": "^3.7.1",
+    "jquery.rateit": "^1.1.6",
     "slick-carousel": "^1.8.1"
   }
 }

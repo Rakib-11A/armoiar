@@ -21,7 +21,7 @@ gem "cssbundling-rails"
 gem "jquery-rails"
 gem "jquery-ui-rails"
 gem "bootstrap", "~> 5.3" # Replaces bootstrap-sass
-gem 'bootstrap-sass', '~> 3.4.1'
+gem "bootstrap-sass", "~> 3.4.1"
 gem "bootstrap-datepicker-rails"
 gem "bootstrap4-kaminari-views"
 gem "select2-rails"
@@ -121,4 +121,4 @@ gem "sprockets-rails"
 
 gem "turbolinks", "~> 5"
 gem "rails-ujs"
-gem 'actioncable', '~> 8.0.2'
+gem "actioncable", "~> 8.0.2"

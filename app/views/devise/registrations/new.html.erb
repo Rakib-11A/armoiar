@@ -6,7 +6,7 @@
     <div class="row">
       <div class="col-sm-6">
         <div class="signup-wrapper row">
-          <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+          <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { id: 'registration_user_form' }) do |f| %>
             <p class="lead">Create New Account!</p>
 
             <div class="form-group">
@@ -16,7 +16,7 @@
 
             <div class="form-group">
               <%= f.label :email %><br/>
-              <%= f.email_field :email, autofocus: true, class: 'required custom-form-control form-control reset-border-radius' %>
+              <%= f.email_field :email, autofocus: true, class: 'required custom-form-control form-control reset-border-radius', id: 'registration_user_email' %>
             </div>
 
 
@@ -25,12 +25,12 @@
               <% if @minimum_password_length %>
                 <em>(<%= @minimum_password_length %> characters minimum)</em>
               <% end %><br/>
-              <%= f.password_field :password, autocomplete: "off", class: 'required custom-form-control form-control reset-border-radius' %>
+              <%= f.password_field :password, autocomplete: "off", class: 'required custom-form-control form-control reset-border-radius', id: 'registration_user_password' %>
             </div>
 
             <div class="form-group">
               <%= f.label :password_confirmation %><br/>
-              <%= f.password_field :password_confirmation, autocomplete: "off", class: 'required custom-form-control form-control reset-border-radius' %>
+              <%= f.password_field :password_confirmation, autocomplete: "off", class: 'required custom-form-control form-control reset-border-radius', id: 'registration_user_password_confirmation' %>
             </div>
 
             <div class="actions">
@@ -42,21 +42,21 @@
 
       <div class="col-sm-6">
         <div class="signin-wrapper sign-in-wrap row">
-          <%= form_for(resource, as: resource_name, url: session_path(resource_name), class: 'login-form', remote: true) do |f| %>
+          <%= form_for(resource, as: resource_name, url: session_path(resource_name), html: { id: 'session_user_form', class: 'login-form' }, remote: true) do |f| %>
 
             <p class="lead">Hello, Welcome Back!</p>
 
             <div class="form-group">
-              <%= f.email_field :email, autofocus: true, class: 'required custom-form-control form-control reset-border-radius', placeholder: 'Username' %>
+              <%= f.email_field :email, autofocus: true, class: 'required custom-form-control form-control reset-border-radius', placeholder: 'Username', id: 'session_user_email_reg_right' %>
             </div>
 
             <div class="form-group">
-              <%= f.password_field :password, autocomplete: "off", class: 'password required custom-form-control form-control reset-border-radius', placeholder: 'Password' %>
+              <%= f.password_field :password, autocomplete: "off", class: 'password required custom-form-control form-control reset-border-radius', placeholder: 'Password', id: 'session_user_password_reg_right' %>
             </div>
 
             <div class="form-group">
-              <label for="remember_me">
-                <%= f.check_box :remember_me, id: 'remember_me' %>
+              <label for="session_user_remember_reg_right">
+                <%= f.check_box :remember_me, id: 'session_user_remember_reg_right' %>
                 Remember Me
               </label>
 

@@ -60,7 +60,7 @@
 <script type="text/javascript">
     $(function () {
         $('.product-thumb-wrapper').children(":first").find('a').addClass('product-active');
-        $(".list-of-recomanded-product").slick({
+        $.fn.slick && $(".list-of-recomanded-product").slick({
             infinite: true,
             slidesToShow: 4,
             slidesToScroll: 4,
@@ -124,7 +124,7 @@
 <script type="text/javascript">
     $(function (e) {
         setTimeout(function () {
-            $("#product-gallery").slick({
+            $.fn.slick && $("#product-gallery").slick({
                 infinite: false,
                 slidesToShow: 4,
                 slidesToScroll: 4,

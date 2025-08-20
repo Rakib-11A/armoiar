@@ -64,6 +64,6 @@
 
 <script type="text/javascript">
     $(function () {
-        $('.quickview-rating').rateit();
+        if ($.fn.rateit) { $('.quickview-rating').rateit(); }
     });
 </script>

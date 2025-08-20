@@ -7,7 +7,14 @@ bootstrap@^5.3.7:
   resolved "https://registry.npmjs.org/bootstrap/-/bootstrap-5.3.7.tgz"
   integrity sha512-7KgiD8UHjfcPBHEpDNg+zGz8L3LqR3GVwqZiBRFX04a1BCArZOz1r2kjly2HQ0WokqTO0v1nF+QAt8dsW4lKlw==
 
-jquery@^3.7.1:
+jquery.rateit@^1.1.6:
+  version "1.1.6"
+  resolved "https://registry.yarnpkg.com/jquery.rateit/-/jquery.rateit-1.1.6.tgz#61439caa69d0eb7c8717333a9ff4268754302fe3"
+  integrity sha512-E2JaJZjPV16VLafZswX2ClB9u2r7jQoLlZXBu0NEZCcuWcHYm6G0FDwsxa8pXz04nsjvsY/jdF8q1E+118LbtA==
+  dependencies:
+    jquery ">=1.6"
+
+jquery@>=1.6, jquery@^3.7.1:
   version "3.7.1"
   resolved "https://registry.npmjs.org/jquery/-/jquery-3.7.1.tgz"
   integrity sha512-m4avr8yL8kmFN8psrbFFFmB/If14iN5o9nw/NgnnM+kybDJpRsAynV2BsfpTYrTRysYUdADVD7CkUUizgkpLfg==
