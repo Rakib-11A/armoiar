@@ -1,0 +1,19 @@
+class CreateStockLocations < ActiveRecord::Migration[8.0]
+  def change
+    create_table :stock_locations do |t|
+      t.string :name
+      t.boolean :default, default: false
+      t.string :address
+      t.string :city
+      t.string :state
+      t.string :zipcode
+      t.string :country
+      t.boolean :active, default: true
+      t.boolean :backorderable_default, default: false
+      t.boolean :propagate_all_variants, default: false
+      t.string :admin_name
+
+      t.timestamps
+    end
+  end
+end
