@@ -1,6 +1,10 @@
 //= require jquery
 //= require jquery_ujs
 //= require rails-ujs
+//= require momentjs
+//= require lightgallery.min
+//= require bootstrap-datepicker
+//= require bootstrap-datetimepicker
 //= require bootstrap-sprockets
 //= require turbolinks
 //= require_tree .
