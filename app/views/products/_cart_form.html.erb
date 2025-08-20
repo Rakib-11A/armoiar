@@ -1,3 +1,4 @@
+
 <%= form_for :order, url: populate_orders_path, remote: true, :html => {id: "order-populate"} do |f| %>
     <div id="inside-product-cart-form" data-hook="inside_product_cart_form">
       <%= hidden_field_tag "variant_id", @product.id %>

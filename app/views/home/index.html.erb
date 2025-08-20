@@ -1,6 +1,4 @@
-<head>
-    <%= stylesheet_link_tag "test" %>
-</head>
+
 
 <% content_for :slider do %>
   <%= render 'shared/top_slider' %>
@@ -67,7 +65,7 @@
         <% end %>
       </div>
     </div>
-    <div class="text-center">
+    <div id="view-more-btn" class="text-center">
       <%= link_to products_path, class: 'btn-more' do %>
         View More...
       <% end %>

@@ -17,7 +17,7 @@
         function _getHtml(element, rate) {
             html = '';
             html += '<div class="rate">';
-            for (i = 1; i <= rate; i++) {
+            for (let i = 1; i <= rate; i++) {
                 html += '<div class="rate-item active"> <i class="fa fa-star icon icon-star"></i> </div>';
             }
 

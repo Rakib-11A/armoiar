@@ -10,6 +10,7 @@ Rails.application.config.assets.paths << Rails.root.join('node_modules')
 # Precompile additional assets.
 # application.js, application.css, and all non-JS/CSS in app/assets are already added.
 Rails.application.config.assets.precompile += %w[
+  test.css
   admin.css
   dashboard.scss
   css/animatee.css
@@ -23,6 +24,6 @@ Rails.application.config.assets.precompile += %w[
   jQuery.print.js
   ckeditor/config.js
 ]
-
+Rails.application.config.assets.precompile += %w( application.bootstrap.css )
 # Optional: precompile entire ckeditor folder if needed
 # Rails.application.config.assets.precompile += %w[ckeditor/*]

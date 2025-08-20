@@ -27,6 +27,8 @@ module Armoiar
     # Autoload paths for lib
     config.autoload_paths << Rails.root.join("lib")
 
+    config.assets.paths << Rails.root.join("app", "assets", "builds")
+
     # Ignore non-Ruby files in lib subdirectories
     # Add more directories if needed, like 'templates', 'generators', etc.
     config.autoload_lib(ignore: %w[assets tasks])
@@ -50,5 +52,6 @@ module Armoiar
     # Time zone example:
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
+    config.assets.enabled = true
   end
 end

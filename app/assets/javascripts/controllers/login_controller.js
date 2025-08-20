@@ -5,6 +5,7 @@ export default class extends Controller {
   static targets = ["loginForm", "forgotForm"]
 
   connect() {
+    console.log("JavaScript connected successfully.........................")
     const modalElement = document.getElementById("modalLoginForm")
     if (modalElement) {
       this.modal = new Modal(modalElement)

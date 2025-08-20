@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="JavaScriptLibraryMappings">
+    <excludedPredefinedLibrary name="armoiar/public/assets/@parcel/watcher/node_modules" />
+    <excludedPredefinedLibrary name="armoiar/public/assets/autoprefixer/node_modules" />
+    <excludedPredefinedLibrary name="armoiar/public/assets/browserslist/node_modules" />
+    <excludedPredefinedLibrary name="armoiar/public/assets/nodemon/node_modules" />
+    <excludedPredefinedLibrary name="armoiar/public/assets/postcss-load-config/node_modules" />
+    <excludedPredefinedLibrary name="armoiar/public/assets/postcss/node_modules" />
+    <excludedPredefinedLibrary name="armoiar/public/assets/sass/node_modules" />
+    <excludedPredefinedLibrary name="armoiar/public/assets/simple-update-notifier/node_modules" />
+    <excludedPredefinedLibrary name="armoiar/public/assets/tinyglobby/node_modules" />
+    <excludedPredefinedLibrary name="armoiar/public/assets/update-browserslist-db/node_modules" />
+  </component>
+</project>

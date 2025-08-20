@@ -25,9 +25,9 @@
   <meta name="twitter:card" content="summary">
   <%= csrf_meta_tags %>
   <%= favicon_link_tag 'favicon.ico' %>
-  <%= stylesheet_link_tag 'application', media: 'all' %>
-  <%= javascript_include_tag 'application' %>
+  <%= stylesheet_link_tag 'application.bootstrap', media: 'all' %>
   <%= render 'shared/cdn_resources' %>
+  <%= javascript_include_tag "application", "data-turbo-track": "reload", "data-turbo": "false" %>
   <link href="https://fonts.googleapis.com/css?family=Montserrat:700" rel="stylesheet">
 </head>
 

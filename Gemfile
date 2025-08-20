@@ -14,13 +14,14 @@ gem "propshaft"
 # ===================
 # Asset / Frontend
 # ===================
-gem "jsbundling-rails"
+# gem "jsbundling-rails"
 gem "cssbundling-rails"
-gem "turbo-rails"
-gem "stimulus-rails"
+# gem "turbo-rails"
+# gem "stimulus-rails"
 gem "jquery-rails"
 gem "jquery-ui-rails"
 gem "bootstrap", "~> 5.3" # Replaces bootstrap-sass
+gem 'bootstrap-sass', '~> 3.4.1'
 gem "bootstrap-datepicker-rails"
 gem "bootstrap4-kaminari-views"
 gem "select2-rails"
@@ -113,3 +114,11 @@ end
 # OS-specific
 # ===================
 gem "tzinfo-data", platforms: %i[windows jruby]
+
+gem "sassc-rails"   # SCSS/SASS compiler
+gem "sprockets-rails"
+# gem 'sprockets', '~> 4.0'
+
+gem "turbolinks", "~> 5"
+gem "rails-ujs"
+gem 'actioncable', '~> 8.0.2'
