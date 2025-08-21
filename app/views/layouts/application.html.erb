@@ -27,11 +27,23 @@
   <%= favicon_link_tag 'favicon.ico' %>
   <%= stylesheet_link_tag 'application.bootstrap', media: 'all' %>
   <%= render 'shared/cdn_resources' %>
+  <script>window.__nativeFetch = window.fetch && window.fetch.bind(window);</script>
   <%= javascript_include_tag "application", "data-turbo-track": "reload", "data-turbo": "false" %>
+  <script>(function(){
+    if (window.__nativeFetch) {
+      window.fetch = window.__nativeFetch;
+      try {
+        // Override global binding so callers resolve to the native fetch
+        window.fetchWithTurboHeaders = function(url, options){
+          return window.__nativeFetch(url, options || {});
+        };
+      } catch(e) {}
+    }
+  })();</script>
   <link href="https://fonts.googleapis.com/css?family=Montserrat:700" rel="stylesheet">
 </head>
 
-<body>
+<body data-turbo="false">
 <div id="page">
   <%= render 'shared/notification' %>
   <%= render 'shared/custom_flash' %>

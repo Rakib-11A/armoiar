@@ -11,8 +11,6 @@ Rails.application.config.assets.paths << Rails.root.join('node_modules')
 # application.js, application.css, and all non-JS/CSS in app/assets are already added.
 Rails.application.config.assets.precompile += %w[
   test.css
-  admin.css
-  dashboard.scss
   css/animatee.css
   css/animatee.min.css
   css/bootstrap-dropdownhover.css
