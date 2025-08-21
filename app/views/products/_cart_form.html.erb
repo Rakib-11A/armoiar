@@ -103,7 +103,7 @@
 
     function attached_slider() {
         setTimeout(function () {
-            $("#product-gallery").slick({
+            $.fn.slick && $("#product-gallery").slick({
                 infinite: false,
                 slidesToShow: 4,
                 slidesToScroll: 4,

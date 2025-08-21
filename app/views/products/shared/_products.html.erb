@@ -12,6 +12,6 @@
 
 <script type="text/javascript">
     $(function () {
-        $('.star-rating').rateit();
+        if ($.fn.rateit) { $('.star-rating').rateit(); }
     })
 </script>

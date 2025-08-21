@@ -97,13 +97,11 @@ GEM
     bindex (0.8.1)
     bootsnap (1.18.6)
       msgpack (~> 1.2)
-    bootstrap (5.3.5)
-      popper_js (>= 2.11.8, < 3)
+    bootstrap (4.6.2.1)
+      autoprefixer-rails (>= 9.1.0)
+      popper_js (>= 1.16.1, < 2)
     bootstrap-datepicker-rails (1.10.0.1)
       railties (>= 3.0)
-    bootstrap-sass (3.4.1)
-      autoprefixer-rails (>= 5.2.1)
-      sassc (>= 2.0.0)
     bootstrap4-kaminari-views (1.0.1)
       kaminari (>= 0.13)
       rails (>= 3.1)
@@ -319,7 +317,7 @@ GEM
     pg (1.6.1-x86_64-linux)
     pg (1.6.1-x86_64-linux-musl)
     pkg-config (1.6.2)
-    popper_js (2.11.8)
+    popper_js (1.16.1)
     pp (0.6.2)
       prettyprint
     prettyprint (0.2.0)
@@ -536,9 +534,8 @@ DEPENDENCIES
   actioncable (~> 8.0.2)
   barby
   bootsnap
-  bootstrap (~> 5.3)
+  bootstrap (~> 4.6)
   bootstrap-datepicker-rails
-  bootstrap-sass (~> 3.4.1)
   bootstrap4-kaminari-views
   brakeman
   byebug
